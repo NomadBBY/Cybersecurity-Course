@@ -1,0 +1,52 @@
+def replace_chars(text, replacements):
+    replaced_text = ''
+    for char in text:
+        if char in replacements and char != replacements[char]:
+            replaced_text += replacements[char]
+        else:
+            replaced_text += char
+    return replaced_text
+
+def main():
+    text = """dpkņā pg gkv āēfvmkakņ, fvgē ēhķpņuļ puqņupņgspuakev jļčēr, fēr rēprkžkēr ēg ēvlrkējač kņouļmļwpjač, pņkķņgļk uņ kpfēp dēkļgspuakup, šņk ēgž ņmņfkgļupfv vu kņmņfļčvupfanpjēr, ņuņgwīkpfv vu ņmņfkgļkņoupfv, fa ēgž dplpkamar ovčēupkagar spuakuņr.\n\nrkvdījļk dēkļgspuakup vu puāļgčanpjēr kņouļmļwpjv, gkv rkvdņukp pņlūrk spuaiēuēr, fvg psrkgada jēvuēr puāļgčanpjēr rprkīčēr vu npkvr puāļgčanpjēr kņouļmļwpjēr gprpuajvčvr vu fvg iļr gprpuajvčvr psčēukļ.\n\ngkv dpkņā ēšrļmķņukv ģņkgēr hļhvmagafar hgļāņrpjēr pg hgļlgēččīiēuēr puqņupņgpr, rprkīčēuēmžkpcpr, āpuēuiv ēuēmžkpcpr vu puāļgčanpjēr kņouļmļwpjēr hgļjņfkv ķēdžkajr. iadp rhņnpamprkp mpņmafļkpņr rkgada mēkķpjēr ķēdļiējļr puāļgčanpjēr kņouļmļwpjēr vseīčvčļr, šēufar vu ķēmrkr pņrkadīr.\n\ndpkņā āēfvmkakņ rēlēkēķļ ēgž ņmņfkgļupfēr vu kņmņfļčvupfanpjv puqņupņgvr, fēr rhņnpēmpsījēr kņmņfļčvupfanpjv, ņmņfkgļupfēr, kgēurhļgkē ņmņfkgļupfēr vu kņmņčakpfēr uļsēgī."""
+    
+    #puqņupņgspuakev = inžinierzinātņu
+
+    replacements = {
+        'ā': 'f',
+        'ē': 'a',
+        'f': 'k',
+        'v': 'u',
+        'm': 'l',
+        'k': 't',
+        'ņ': 'e',
+        'd': 'd',
+        'p': 'i',
+        'g': 'r',
+        'u': 'n',
+        't': 'l',
+        'ļ': 'o',
+        'h': 'p', 
+        'ķ' : 'v',
+        'q' : 'ž',
+        'a' : 'ā',
+        's' : 'z',
+        'e' : 'ņ',
+        'č' : 'm',
+        'r' : 's',
+        'ž' : 'ī',
+        'w' : 'ģ',
+        'l' : 'g',
+        'o' : 'h',
+        'š' : 'b',
+        'ī' : 'ē',
+        'i' : 'š',
+        'n' : 'c',
+        'ģ' : 'č',
+        'c' : 'ķ'
+}
+    replaced_text = replace_chars(text, replacements)
+    print(replaced_text)
+
+if __name__ == "__main__":
+    main()
