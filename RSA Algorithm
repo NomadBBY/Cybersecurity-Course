@@ -1,0 +1,28 @@
+import math
+
+# Given values
+p = int(input("Input p: "))
+q = int(input("Input q: "))
+e = int(input("Input e: "))
+X = int(input("Input X: "))
+
+# Calculate N
+N = p * q
+
+# Calculate φ(N)
+phi_N = (p - 1) * (q - 1)
+
+# Calculate d using the modular inverse of e mod φ(N)
+d = pow(e, -1, phi_N)
+
+# Encrypt X
+C = pow(X, e, N)
+
+# Decrypt C back to X
+decrypted_X = pow(C, d, N)
+
+# Print results
+print("N =", N)
+print("d =", d)
+print("X =", X)
+print("C =", C)
